@@ -743,45 +743,68 @@ footer p{
 
 
 
-/* SERVICES SECTION */
+/* SERVICES SECTION*/
 
 #services {
   margin-top: 10rem;
+  position: relative;
+}
+.services-wrapper {
+  max-width: 1100px;
+  margin: 3rem auto 0 auto;
+  padding: 0 1rem;
 }
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
 }
 
 .service-card {
-  background: #fff;
-  border: 1px solid rgb(163,163,163);
-  border-radius: 1.5rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: 0.3s ease;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
+  width: 44px;
+  height: 44px;
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 .service-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #111;
 }
 
 .service-card p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 640px) {
+  .services-container {
+    grid-template-columns: 1fr; 
+  }
 }
